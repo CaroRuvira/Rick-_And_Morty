@@ -1,0 +1,29 @@
+.container{
+background-color: #a2d2ff;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+
+
+
+
+
+
+.titulo{
+color: black;
+}
+
+.titulo2{
+color: black;
+
+}
+
+.parrafo{
+color: black;
+
+}
+

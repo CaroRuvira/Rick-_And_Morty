@@ -1,0 +1,17 @@
+.container{
+    background-color: #a2d2ff;;
+    padding-bottom: 1rem;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    border: .5px solid;
+
+}
+
+.input{
+    font-style: oblique;
+    align-items: center;
+    margin-top: 1rem;
+    size: 5rem;
+
+}
+
