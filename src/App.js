@@ -2,37 +2,36 @@ import './styles/App.css'
 import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav.jsx'; 
 import About from './components/About/About';
-import Detail from './components/Detail/Detail';
-import Login from './components/Login/Login';
-import { useState, useEffect } from 'react';   
-import { Routes, Route } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import Detail from './components/Detail/Detail'
+import Form from './components/Form/Form'
+import { useState, useEffect  } from 'react';   
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+
 
 
 
 function App () {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const [characters, setCharacters] = useState([]);
-
-  const navigate = useNavigate()
-
   const [acces, setAcces] = useState(false);
 
-  const username = 'caro@gmail.com' ;
+  const username ='caroruvira@gmail.com';
+  const password = 'soyhenry12';
 
-  const password = 'soyhenry';
-
-  const login = (inputs) => {
-    if(inputs.user === username && inputs.password === password){
-      setAcces(true);
-      navigate('/home')
-    }
+  const login = (userData) => {
+   if (userData.username === username && userData.password === password){
+    setAcces(true)
+    navigate("/home");
+   }
   }
 
   useEffect(() => {
-    !acces && navigate('/');
- }, [acces]);
+    !acces && navigate ('/')
+  }, [acces])
 
-
+ 
   const onSearch = (character) => {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
     .then((response) => response.json())
@@ -54,9 +53,10 @@ function App () {
   return (
    
     <div className='App' style={{ padding: '25px' ,}}>
-        <Nav onSearch ={onSearch} />
-        <Routes>
-          <Route path='/' element={<Login/>} />  
+
+        {location.pathname === '/' ? <Form login={login}/> : <Nav onSearch ={onSearch} />} 
+        
+        <Routes> 
           <Route path='/home' element={<Cards onClose ={onClose} characters={characters} />}/>
           <Route path ='/about' element={<About />}/>
           <Route path='/detail/:detailId' element={<Detail />}/> 

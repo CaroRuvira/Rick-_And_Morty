@@ -11,7 +11,7 @@
       <div className={styles.container}>
          
          <input className={styles.input} type='search' value={character} onChange={handleChange}  />
-         <button className={styles.button} onClick={() => onSearch(character)}>Agregar</button> 
+         <button  onClick={() => onSearch(character)}>Agregar</button> 
       
       </div>
    );

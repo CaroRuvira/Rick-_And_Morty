@@ -1,22 +1,50 @@
 .container{
-    background-color:  #a2d2ff;
+   
+    padding: 2rem;
+  
 }
 
+.imagecontainer{
+    
+        display: flex;
+        justify-content: center;
+}
+    
+.container div img{
+        width: 20rem;
+        height: 20rem;
+        border-radius: 8rem;
+        overflow: hidden;
+     
+    }
+
+
+
 .name{
-    color: rgb(183, 124, 35);
+    color:#ff006e;
+    display: flex;
+    justify-content: center;
 }
 .status{
-    color: rgb(183, 124, 35);
+    color:#ff006e;
+    display: flex;
+    justify-content: center;
 }
 
 .species{
-    color: rgb(183, 124, 35);
+    color:#ff006e;
+    display: flex;
+    justify-content: center;
 }
 
 .gender{
-    color: rgb(183, 124, 35);
+    color:#ff006e;
+    display: flex;
+    justify-content: center;
 }
 
 .origin{
-    color: rgb(183, 124, 35);
+    color:#ff006e;
+    display: flex;
+    justify-content: center;
 }

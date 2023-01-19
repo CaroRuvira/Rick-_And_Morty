@@ -24,7 +24,11 @@ const Detail = () => {
 
     return (
         <div className={styles.container}>
-            <img src={character?.image} alt={character.name}/>
+          <div>
+            <div className={styles.imagecontainer}>
+               <img src={character?.image} alt={character.name}/>
+            </div>
+          </div>
             <h2 className={styles.name }>Nombre: {character?.name}</h2>
             <h2 className={styles.status }>Estado: {character.status}</h2>
             <h2 className={styles.species }>Especie: {character.species}</h2>

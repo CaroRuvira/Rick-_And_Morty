@@ -1,17 +1,47 @@
 .container{
-    background-color: #a2d2ff;;
-    padding-bottom: 1rem;
-    margin-bottom: .5rem;
-    margin-top: .5rem;
-    border: .5px solid;
+    display: flex;
+    align-items: center
 
 }
 
 .input{
-    font-style: oblique;
-    align-items: center;
-    margin-top: 1rem;
-    size: 5rem;
+    background-color: #feeafa;
+    border-radius: 20rem;
+    width: 15rem;
+    height: 1.5rem;
+    border: transparent;
+    color: rgb(19, 18, 18);
+    
+    overflow: hidden;
+    transition: 300ms;
 
 }
+
+.input::placeholder{
+    color: rgb(8, 8, 8);
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.container button{
+    margin-left: 1rem;
+    border-radius: 5rem;
+    margin-top: .5rem;
+    width: 5rem;
+    height: 2.2rem;
+    background: linear-gradient(rgba(26, 29, 27, 0.461), rgba(0, 0, 0, 0));
+    border: transparent;
+    font-weight: 800;
+    margin-bottom: .5rem;
+
+    overflow: hidden;
+    transition: 300ms;
+}
+
+.container button:hover{
+    cursor: pointer;
+    color: #ff9100;
+    text-shadow: #FD96A9;
+
+}
+
 
