@@ -1,9 +1,0 @@
-.body{
-background-image: url('C:\Users\Usuario\Desktop\Rick and Morty APPP\rick_and_morty\public\Assets\cielo.jpg');
-background-position: center center;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size:cover;
-height: 100%;
-animation: movimiento 10s infinite;
-} 
