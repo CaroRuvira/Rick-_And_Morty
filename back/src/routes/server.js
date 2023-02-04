@@ -1,5 +1,4 @@
 const express = require("express");
-
 const app = express();
 const axios = require('axios')
 const cors = require ("cors")
@@ -66,7 +65,7 @@ app.post('/rickandmorty/fav', (req,res) => {
 
     fav.push(req.body);
 
-    res.status(200).send('Se guardaron correctamente los datos')
+    res.status(200).json(req.body)
 })
 
 app.delete('/rickandmorty/fav/:id', (req, res) => {
@@ -76,7 +75,7 @@ app.delete('/rickandmorty/fav/:id', (req, res) => {
     const favFiltered = fav.filter(char => char.id !== Number(id));
     fav = favFiltered;
 
-    res.status(200).send('Se eliminó correctamente')
+    res.status(200).json(fav)
 })
 
 
